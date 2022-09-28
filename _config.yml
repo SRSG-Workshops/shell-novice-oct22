@@ -23,8 +23,8 @@ address: "https://teams.microsoft.com/l/team/19%3aK-63IwXi0yQF_QisTHr1Q9DWAcNeGl
 platform-name: "Teams"   # name of online platform e.g. Teams, Zoom e.t.c
 country: "gb"         # e.g. gb
 language: "en"        # e.g. en
-latitude: "50.909698"    # latitude of location (Soton: 50.909698)
-longitude: "-1.404351"   # longitude of location (Soton: -1.404351)
+latitude: "50.90969"    # latitude of location (Soton: 50.909698)
+longitude: "-1.40435"   # longitude of location (Soton: -1.404351)
 
 # Specify the start and end date of the lesson
 humandate: "10th October"      # e.g. "6th August"
