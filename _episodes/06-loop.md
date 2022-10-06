@@ -418,21 +418,21 @@ files before you operate on them!
 > is to echo the commands it would run instead of actually running them.
 > For example, we could write our file renaming loop like this:
 >
-> ~~~
-> for filename in *.dat
-> do
->     echo mv $filename original-$filename
-> done
-> ~~~
-> {: .bash}
+> > ~~~
+> > for filename in *.dat
+> > do
+> >     echo mv $filename original-$filename
+> > done
+> > ~~~
+> > {: .bash}
 >
 > Instead of running `mv`, this loop runs `echo`, which prints out:
 >
-> ~~~
-> mv basilisk.dat original-basilisk.dat
-> mv unicorn.dat original-unicorn.dat
-> ~~~
-> {: .bash}
+> > ~~~
+> > mv basilisk.dat original-basilisk.dat
+> > mv unicorn.dat original-unicorn.dat
+> > ~~~
+> > {: .bash}
 >
 > *without* actually running those commands. We can then use up-arrow to
 > redisplay the loop, back-arrow to get to the word `echo`, delete it, and

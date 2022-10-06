@@ -150,8 +150,9 @@ Note the output is the same, since our full data set contains the same first 100
 > If we left out these quotes, and `$1` expanded to a filename like
 > `climate data.csv`,
 > the command in the script would effectively be:
->
+> > ~~~
 > >  head -15 climate data.csv | tail -5
+> > ~~~
 >
 > This would call `head` on two separate files, `climate` and `data.csv`,
 > which is probably not what we intended.
@@ -317,19 +318,20 @@ wc -l "$@" | sort -n
 > (and potentially getting them wrong)
 > we can do this:
 >
-> {: .bash}
->~~~
-> $ history | tail -4 > redo-figure-3.sh
-> ~~~
+> > ~~~
+> > $ history | tail -4 > redo-figure-3.sh
+> > ~~~
+> > {: .bash}
 >
 > The file `redo-figure-3.sh` now contains:
 >
-> ~~~
-> 297 bash goostats -r NENE01729B.txt stats-NENE01729B.txt
-> 298 bash goodiff stats-NENE01729B.txt /data/validated/01729.txt > 01729-differences.txt
-> 299 cut -d ',' -f 2-3 01729-differences.txt > 01729-time-series.txt
-> 300 ygraph --format scatter --color bw --borders none 01729-time-series.txt figure-3.png
-> ~~~
+> > ~~~
+> > 297 bash goostats -r NENE01729B.txt stats-NENE01729B.txt
+> > 298 bash goodiff stats-NENE01729B.txt /data/validated/01729.txt > 01729-differences.txt
+> > 299 cut -d ',' -f 2-3 01729-differences.txt > 01729-time-series.txt
+> > 300 ygraph --format scatter --color bw --borders none 01729-time-series.txt figure-3.png
+> > ~~~
+> > {: .output}
 >
 > After a moment's work in an editor to remove the historical reference number for each command (e.g. 297, 298),
 > we have a completely accurate record of how we created that figure.
