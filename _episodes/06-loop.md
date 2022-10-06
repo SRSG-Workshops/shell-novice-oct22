@@ -325,7 +325,7 @@ GTTCTGCTAA
 > > ~~~
 > > basilisk.dat red dragon.dat unicorn.dat
 > > ~~~
-> {: .output}
+> > {: .output}
 >
 > With older versions of Bash,
 > or most other shells,
