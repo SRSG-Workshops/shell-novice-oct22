@@ -307,11 +307,14 @@ GTTCTGCTAA
 > Filename expansion in loops is another reason you should not use spaces in filenames.
 > Suppose our data files are named:
 >
-> ~~~
-> basilisk.dat
-> red dragon.dat
-> unicorn.dat
-> ~~~
+> > ~~~
+> > basilisk.dat
+> > red dragon.dat
+> > unicorn.dat
+> > ~~~
+> 
+{: .output}
+
 >
 > If we try to process them using:
 >
@@ -547,7 +550,7 @@ files before you operate on them!
 > > 2. Incorrect, since we're using the `>` redirect operator, which will overwrite any previous contents of `xylose.dat`.
 > > 3. Incorrect, since the file `xylose.dat` would not have existed when `*.dat` would have been expanded.
 > > 4. Incorrect.
-> > 
+> >
 > > 
 > {: .solution}
 > 
@@ -609,7 +612,7 @@ files before you operate on them!
 > Suppose we want to preview the commands the following loop will execute
 > without actually running those commands:
 >
-> 
+>
 > > ~~~
 > > for file in *.dat
 > > do
@@ -619,7 +622,7 @@ files before you operate on them!
 > > 
 > {: .bash}
 > 
-> 
+>
 > What is the difference between the the two loops below, and which one would we
 > want to run?
 >
@@ -645,7 +648,7 @@ files before you operate on them!
 > > 
 > {: .bash}
 > 
-> 
+>
 > > ## Solution
 > >
 > > Version 2 is the one that successfully acts as a dry run. In version 1, since the `>` file redirect is not within quotes, the script will create three files `analyzed-basilisk.dat`, `analyzed-minotaur.dat`, and `analyzed-unicorn.dat` which is not what we want.
