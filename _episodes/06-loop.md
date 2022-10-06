@@ -303,38 +303,41 @@ GTTCTGCTAA
 > Filename expansion in loops is another reason you should not use spaces in filenames.
 > Suppose our data files are named:
 >
-> ~~~
-> basilisk.dat
-> red dragon.dat
-> unicorn.dat
-> ~~~
+> > ~~~
+> > basilisk.dat
+> > red dragon.dat
+> > unicorn.dat
+> > ~~~
+> > {: .output}
 >
 > If we try to process them using:
 >
-> ~~~
-> for filename in *.dat
-> do
->     head -100 $filename | tail -20
-> done
-> ~~~
-> {: .bash}
+> > ~~~
+> > for filename in *.dat
+> > do
+> >     head -100 $filename | tail -20
+> > done
+> > ~~~
+> > {: .bash}
 >
 > then the shell will expand `*.dat` to create:
 >
-> ~~~
-> basilisk.dat red dragon.dat unicorn.dat
-> ~~~
+> > ~~~
+> > basilisk.dat red dragon.dat unicorn.dat
+> > ~~~
+> {: .output}
 >
 > With older versions of Bash,
 > or most other shells,
 > `filename` will then be assigned the following values in turn:
 >
-> ~~~
-> basilisk.dat
-> red
-> dragon.dat
-> unicorn.dat
-> ~~~
+> > ~~~
+> > basilisk.dat
+> > red
+> > dragon.dat
+> > unicorn.dat
+> > ~~~
+> > {: .output}
 >
 > That's a problem: `head` can't read files called `red` and `dragon.dat`
 > because they don't exist,
@@ -343,13 +346,13 @@ GTTCTGCTAA
 > We can make our script a little bit more robust
 > by **quoting** our use of the variable:
 >
-> ~~~
-> for filename in *.dat
-> do
->     head -100 "$filename" | tail -20
-> done
-> ~~~
-> {: .bash}
+> > ~~~
+> > for filename in *.dat
+> > do
+> >     head -100 "$filename" | tail -20
+> > done
+> > ~~~
+> > {: .bash}
 >
 > but it's simpler just to avoid using spaces (or other special characters) in filenames.
 >
