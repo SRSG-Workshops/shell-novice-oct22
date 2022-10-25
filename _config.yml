@@ -27,10 +27,10 @@ latitude: "50.90969"    # latitude of location (Soton: 50.909698)
 longitude: "-1.40435"   # longitude of location (Soton: -1.404351)
 
 # Specify the start and end date of the lesson
-humandate: "10th October"      # e.g. "6th August"
+humandate: "31th October"      # e.g. "6th August"
 humantime: "09:15-13:00"      # e.g. "09:00-17:00"
-startdate: "2022-10-10"        # e.g. YYYY-MM-DD # e.g. YYYY-MM-DD # This is required for the surveys NOTE: 1990-1-1 will not work
-enddate: "2022-10-10"          # e.g. YYYY-MM-DD
+startdate: "2022-10-31"        # e.g. YYYY-MM-DD # e.g. YYYY-MM-DD # This is required for the surveys NOTE: 1990-1-1 will not work
+enddate: "2022-10-31"          # e.g. YYYY-MM-DD
 
 # Start time in minutes (0 to be clock-independent, 3:30 pm or 15:30 both okay).
 start-time: "09:15"
